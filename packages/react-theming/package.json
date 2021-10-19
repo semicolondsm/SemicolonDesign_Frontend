@@ -1,0 +1,24 @@
+{
+    "name": "@semicolondsm/react-theming",
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "author": "eungyeole <eungyeole@naver.com>",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": "git@github.com:semicolondsm/SemicolonDesign_Frontend.git",
+    "devDependencies": {
+        "typescript": "^4.4.2"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "scripts": {
+        "build": "npm run build:clean && npm run build:dist",
+        "build:clean": "rm -rf ./dist",
+        "build:dist": "tsc"
+    }
+}
