@@ -50,5 +50,4 @@
     "dependencies": {
         "@semicolondsm/design-token": "workspace:packages/design-token"
     }
-  }
-  
+}
