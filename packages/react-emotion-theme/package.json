@@ -1,0 +1,34 @@
+{
+    "name": "@semicolondsm/react-emotion-theme",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "version": "1.0.0",
+    "author": "eungyeole <eungyeole@naver.com>",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": "git@github.com:semicolondsm/SemicolonDesign_Frontend.git",
+    "devDependencies": {
+        "@emotion/react": "^11.4.0",
+        "@types/react": "^17.0.13",
+        "react": "^17.0.2",
+        "typescript": "^4.4.2"
+    },
+    "peerDependencies": {
+        "@emotion/react": "^11.4.0",
+        "react": "^17.0.2"
+    },
+    "dependencies": {
+        "@semicolondsm/design-token": "1.0.0",
+        "@semicolondsm/react-theming": "1.0.0"
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "npm run build:clean && npm run build:dist",
+        "build:clean": "rm -rf ./dist",
+        "build:dist": "tsc"
+    }
+}
