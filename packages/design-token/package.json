@@ -1,0 +1,23 @@
+{
+    "name": "@semicolondsm/design-token",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "version": "1.0.0",
+    "devDependencies": {
+        "typescript": "^4.4.2"
+    },
+    "author": "eungyeole <eungyeole@naver.com>",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": "git@github.com:semicolondsm/SemicolonDesign_Frontend.git",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "npm run build:clean && npm run build:dist",
+        "build:clean": "rm -rf ./dist",
+        "build:dist": "tsc"
+    }
+}
