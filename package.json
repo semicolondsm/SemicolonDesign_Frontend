@@ -14,7 +14,7 @@
   "scripts": {
     "build:all": "yarn workspaces foreach -t -p run build",
     "build:light": "yarn workspaces since run 'npm publish' main develop",
-    "multi-semantic-release": "multi-semantic-release",
+    "multi-semantic-release": "multi-semantic-release --sequential-init",
     "release": "yarn run multi-semantic-release"
   },
   "devDependencies": {
