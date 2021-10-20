@@ -2644,7 +2644,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@semicolondsm/design-token@1.0.0, @semicolondsm/design-token@workspace:packages/design-token":
+"@semicolondsm/design-token@workspace:packages/design-token":
   version: 0.0.0-use.local
   resolution: "@semicolondsm/design-token@workspace:packages/design-token"
   dependencies:
@@ -2657,8 +2657,8 @@ __metadata:
   resolution: "@semicolondsm/react-emotion-theme@workspace:packages/react-emotion-theme"
   dependencies:
     "@emotion/react": ^11.4.0
-    "@semicolondsm/design-token": 1.0.0
-    "@semicolondsm/react-theming": 1.0.0
+    "@semicolondsm/design-token": "workspace:packages/design-token"
+    "@semicolondsm/react-theming": "workspace:packages/react-theming"
     "@types/react": ^17.0.13
     react: ^17.0.2
     typescript: ^4.4.2
@@ -2668,7 +2668,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@semicolondsm/react-theming@1.0.0, @semicolondsm/react-theming@workspace:packages/react-theming":
+"@semicolondsm/react-theming@workspace:packages/react-theming":
   version: 0.0.0-use.local
   resolution: "@semicolondsm/react-theming@workspace:packages/react-theming"
   dependencies:
