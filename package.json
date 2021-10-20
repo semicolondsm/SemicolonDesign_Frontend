@@ -5,7 +5,11 @@
     "packages/*"
   ],
   "resolutions": {
-    "typescript": "4.3.5"
+    "typescript": "4.3.5",
+    "@semicolondsm/design-token": "workspace:packages/design-token",
+    "@semicolondsm/react-theming": "workspace:packages/react-theming",
+    "@semicolondsm/ui": "workspace:packages/ui",
+    "@semicolondsm/react-emotion-theme": "workspace:packages/react-emotion-theme"
   },
   "scripts": {
     "build:all": "yarn workspaces foreach -t -p run build",

@@ -20,8 +20,8 @@
         "react": "^17.0.2"
     },
     "dependencies": {
-        "@semicolondsm/design-token": "1.0.0",
-        "@semicolondsm/react-theming": "1.0.0"
+        "@semicolondsm/design-token": "workspace:packages/design-token",
+        "@semicolondsm/react-theming": "workspace:packages/react-theming"
     },
     "files": [
         "dist"
