@@ -48,6 +48,6 @@
         "typescript": "^4.4.3"
     },
     "dependencies": {
-        "@semicolondsm/design-token": "workspace:packages/design-token"
+        "@semicolondsm/design-token": "1.0.0"
     }
 }
