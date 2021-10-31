@@ -13,7 +13,7 @@ import { colors } from "@semicolondsm/design-token";
 ```
 
 ```typescript
-import { colors } from "@karrotmarket/design-token";
+import { colors } from "@semicolondsm/design-token";
 
 // WebView에서 사용되는 scheme 입니다.
 // 반드시 css서버에서의 link가 필요합니다.
