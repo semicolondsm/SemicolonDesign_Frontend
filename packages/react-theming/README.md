@@ -3,5 +3,5 @@
 ## Install
 
 ```
-yarn add @semicolon/react-theming
+yarn add @semicolondsm/react-theming
 ```
