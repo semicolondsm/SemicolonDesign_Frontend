@@ -11,6 +11,7 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-
+      - name: Install Dependency
+        run: npm install -g esbuild-node-externals esbuild
       - name: Build
         run: yarn build:all
