@@ -1,6 +1,6 @@
 {
     "name": "@semicolondsm/react-theming",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "./src/index.ts",
     "author": "eungyeole <eungyeole@naver.com>",
     "license": "MIT",
