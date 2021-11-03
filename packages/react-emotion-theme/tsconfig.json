@@ -3,9 +3,9 @@
     "compilerOptions": {
         "rootDir": "src",
         "outDir": "dist",
-        "jsx": "preserve",
+        "jsx": "react",
         "emitDeclarationOnly": true,
-        "declaration": true,
+        "declaration": true
     },
     "include": [
         "src"
