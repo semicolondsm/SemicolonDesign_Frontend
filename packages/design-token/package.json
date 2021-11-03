@@ -21,7 +21,7 @@
     "scripts": {
         "build": "npm run build:clean && npm run build:dist & npm run build:declaration",
         "build:clean": "rm -rf ./dist",
-        "build:dist": "esbuild src/index.ts --bundle --platform=node --sourcemap --outfile=dist/index.js",
+        "build:dist": "node esbuild.config.js",
         "build:declaration": "tsc"
     }
 }

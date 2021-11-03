@@ -20,9 +20,9 @@
         "src"
     ],
     "scripts": {
-        "build": "echo 1",
+        "build": "npm run build:clean && npm run build:dist & npm run build:declaration",
         "build:clean": "rm -rf ./dist",
-        "build:dist": "yarn node esbuild.config.js",
+        "build:dist": "node esbuild.config.js",
         "build:declaration": "tsc"
     }
 }
