@@ -4,6 +4,8 @@
         "rootDir": "src",
         "outDir": "dist",
         "jsx": "preserve",
+        "emitDeclarationOnly": true,
+        "declaration": true,
     },
     "include": [
         "src"

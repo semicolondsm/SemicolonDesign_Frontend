@@ -9,6 +9,7 @@
         "declaration": true,
         "removeComments": true,
         "allowSyntheticDefaultImports": true,
-        "moduleResolution": "node"
+        "moduleResolution": "node",
+        "esModuleInterop": true
     }
 }
