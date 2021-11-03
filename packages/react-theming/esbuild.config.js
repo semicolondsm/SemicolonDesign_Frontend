@@ -1,5 +1,5 @@
 const esbuild = require('esbuild');
-const { nodeExternalsPlugin } = require('esbuild-node-externals');
+const { pnpPlugin } = require('@yarnpkg/esbuild-plugin-pnp');
 
 esbuild
     .build({
@@ -11,6 +11,6 @@ esbuild
         format: 'cjs',
         sourcemap: true,
         target: 'es6',
-        plugins: [nodeExternalsPlugin()],
+        plugins: [pnpPlugin()],
     })
     .catch(() => process.exit(1));

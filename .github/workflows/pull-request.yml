@@ -12,5 +12,8 @@ jobs:
           node-version: 14
           registry-url: https://registry.npmjs.org/
 
+      - name: Yarn Set
+        run: yarn
+
       - name: Build
         run: yarn build:all

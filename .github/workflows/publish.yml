@@ -26,6 +26,9 @@ jobs:
           git remote set-url origin https://xquare-admin:$GH_TOKEN@github.com/semicolondsm/SemicolonDesign_Frontend.git
         env:
           GH_TOKEN: ${{ secrets.GHP_TOKEN }}
+          
+      - name: Yarn Set
+        run: yarn
 
       - name: Build
         run: yarn build:all
