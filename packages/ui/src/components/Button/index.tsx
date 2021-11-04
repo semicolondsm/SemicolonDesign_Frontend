@@ -53,7 +53,7 @@ export const ButtonElement = styled.button<ButtonElementProps>`
     }
 `;
 
-const Button: FC<ButtonProps> = ({
+export const Button: FC<ButtonProps> = ({
     children,
     size = 'md',
     fill = 'default',
@@ -107,5 +107,3 @@ const Button: FC<ButtonProps> = ({
         </ButtonElement>
     );
 };
-
-export default Button;

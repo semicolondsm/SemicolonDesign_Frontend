@@ -1,5 +1,5 @@
-import * as React from 'react';
-import SwitchButton from './SwitchButton';
+import React from 'react';
+import { SwitchButton } from './SwitchButton';
 export default { title: 'components/SwitchButton' };
 export const Test = () => {
     const [value, setValue] = React.useState<boolean>(false);
