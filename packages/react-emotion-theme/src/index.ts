@@ -1,1 +1,1 @@
-export * from './SDSThemeProvider';
+export * from './SDSThemeProvider'
