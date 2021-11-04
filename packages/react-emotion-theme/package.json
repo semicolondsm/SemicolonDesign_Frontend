@@ -1,6 +1,7 @@
 {
     "name": "@semicolondsm/react-emotion-theme",
-    "main": "./src/index.ts",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "version": "1.0.5",
     "author": "eungyeole <eungyeole@naver.com>",
     "license": "MIT",
