@@ -9,7 +9,7 @@ esbuild
         format: 'cjs',
         sourcemap: true,
         bundle: true,
-        external: ['react', 'react-dom', '@emotion/react'],
+        external: ['react', 'react-dom', '@emotion/react', '@emotion/styled'],
         plugins: [pnpPlugin()],
     })
     .catch(() => process.exit(1));
