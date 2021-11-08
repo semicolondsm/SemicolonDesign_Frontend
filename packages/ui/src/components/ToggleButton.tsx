@@ -55,9 +55,6 @@ const ActiveBackground = styled.div<ButtonStyledProps>`
     transition: all .3s cubic-bezier(0.5, 1, 0.89, 1);
 `;
 
-// left: ${(props) => (props.activeNumber - 1) * 100 / props.length}%;
-// 
-
 const Background = styled.div`
     position: absolute;
     top: 0;
