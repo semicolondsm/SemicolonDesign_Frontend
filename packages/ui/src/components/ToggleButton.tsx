@@ -69,9 +69,12 @@ const Background = styled.div`
 export const ToggleButton: FC<ButtonProps> = ({
     items,
     containStyle,
-    defaultValue = 0
+    defaultValue = 1
 }) => {
-    const [activeNumber, setActiveNumber] = useState<number>(defaultValue);
+    const rangeValue = defaultValue < 1 ? 1 
+        : defaultValue > items.length ? items.length 
+        : defaultValue;
+    const [activeNumber, setActiveNumber] = useState<number>(rangeValue);
 
     const buttonOnClick = (number: number, e: ClickEvent, callback?: ((event: ClickEvent) => void)) => {
         setActiveNumber(number);
