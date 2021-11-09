@@ -13,6 +13,7 @@ interface itemOption {
 interface ButtonProps {
     items: itemOption[];
     containStyle?: CSSProperties;
+    defaultValue?: number;
 }
 
 interface ButtonStyledProps {
@@ -65,13 +66,14 @@ const Background = styled.div`
     z-index: -2;
 `;
 
-const ToggleButton: FC<ButtonProps> = ({
+export const ToggleButton: FC<ButtonProps> = ({
     items,
-    containStyle
+    containStyle,
+    defaultValue = 0
 }) => {
-    const [activeNumber, setActiveNumber] = useState<number>(1);
+    const [activeNumber, setActiveNumber] = useState<number>(defaultValue);
 
-    const buttonOnClick = (number: number, callback: ((event: ClickEvent) => void) | undefined, e: ClickEvent) => {
+    const buttonOnClick = (number: number, e: ClickEvent, callback?: ((event: ClickEvent) => void)) => {
         setActiveNumber(number);
         if(callback) callback(e);
     }
@@ -99,6 +101,4 @@ const ToggleButton: FC<ButtonProps> = ({
             </ButtonWrapper>
         </Container>
     )
-}
-
-export default ToggleButton;    
+};
