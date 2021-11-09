@@ -94,7 +94,7 @@ export const ToggleButton: FC<ButtonProps> = ({
                     }, i) => (
                         <Button 
                             style={buttonStyle} 
-                            onClick={(e) => buttonOnClick(i+1, onClick, e)} 
+                            onClick={(e) => buttonOnClick(i+1, e, onClick)} 
                             key={i}
                         >
                             <Botton color="gray700">{title}</Botton>
