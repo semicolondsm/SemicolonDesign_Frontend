@@ -41,7 +41,6 @@ const ButtonCircle = styled.div<ButtonCircleProps>`
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
     background: white;
     top: 50%;
     left: 0;
