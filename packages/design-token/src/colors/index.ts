@@ -181,7 +181,7 @@ export const light: Readonly<ColorTheme> = {
 
 export const dark: Readonly<ColorTheme> = {
     scheme: {
-        white: '#000000',
+        white: '#212121',
         black: '#FFFFFF',
         /* purple */
         purple50: '#F0E6FF',
