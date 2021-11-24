@@ -2,7 +2,7 @@
     "name": "@semicolondsm/design-token",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "devDependencies": {
         "@yarnpkg/esbuild-plugin-pnp": "^2.0.0",
         "esbuild": "^0.13.12",
