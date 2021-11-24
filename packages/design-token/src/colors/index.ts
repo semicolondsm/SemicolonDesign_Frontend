@@ -205,7 +205,7 @@ export const dark: Readonly<ColorTheme> = {
         gray600: '#757575',
         gray700: '#616161',
         gray800: '#424242',
-        gray900: '#212121',
+        gray900: '#FFFFFF',
 
         /* yellow */
         yellow50: '#FFFEE6',
