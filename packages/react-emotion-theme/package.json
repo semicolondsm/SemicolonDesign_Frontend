@@ -2,7 +2,7 @@
     "name": "@semicolondsm/react-emotion-theme",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "author": "eungyeole <eungyeole@naver.com>",
     "license": "MIT",
     "publishConfig": {
@@ -24,7 +24,7 @@
         "react": "^17.0.2"
     },
     "dependencies": {
-        "@semicolondsm/design-token": "1.0.5",
+        "@semicolondsm/design-token": "1.0.6",
         "@semicolondsm/react-theming": "1.0.4"
     },
     "files": [
