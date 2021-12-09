@@ -4,15 +4,18 @@ import { Botton } from './typography';
 
 type ClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 
-interface itemOption {
+export interface itemOption {
     title: string;
     onClick?: (event: ClickEvent) => void;
     buttonStyle?: CSSProperties;
 }
 
-interface ButtonProps {
+export interface ButtonProps {
+    /** 들어갈 item 의 값들 type:{ title:string } */
     items: itemOption[];
+    /** 사용자가 직접 설정할 contain 스타일 값 */
     containStyle?: CSSProperties;
+    /** 사용자가 직접 설정해는 버튼의 갯수 (이 값이 없으면 item의 길이로 설정됩니다) */
     defaultValue?: number;
 }
 
