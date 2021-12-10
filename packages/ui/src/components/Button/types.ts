@@ -1,5 +1,5 @@
 import { ColorScheme } from '@semicolondsm/design-token';
-import { ReactElement, Component, MouseEvent } from 'react';
+import React, { ReactElement, Component } from 'react';
 
 export type SizeType = 'sm' | 'md' | 'lg';
 
@@ -43,7 +43,7 @@ export interface ButtonProps {
     loading?: boolean;
     disabled?: boolean;
     background?: boolean;
-    onClick?: (event?: MouseEvent<HTMLElement, MouseEvent>) => void;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface ButtonElementProps {
@@ -62,7 +62,11 @@ export interface ButtonElementProps {
     isFull: boolean;
 }
 
-export const Colors = {
+interface ColorsMap {
+    [key: string]: keyof ColorScheme;
+}
+
+export const Colors: ColorsMap = {
     default: 'gray100',
     purple: 'purple400',
     purpleLight: 'purple50',
@@ -73,7 +77,7 @@ export const Colors = {
     bnPurple: 'white',
 };
 
-export const ActiveColors = {
+export const ActiveColors: ColorsMap = {
     default: 'gray300',
     purple: 'purple500',
     purpleLight: 'purple100',
@@ -83,7 +87,7 @@ export const ActiveColors = {
     bnPurple: 'purple50',
 };
 
-export const FontColors = {
+export const FontColors: ColorsMap = {
     default: 'gray700',
     purple: 'white',
     purpleLight: 'purple400',
@@ -94,7 +98,7 @@ export const FontColors = {
     bnPurple: 'purple400',
 };
 
-export const DisabledColors = {
+export const DisabledColors: ColorsMap = {
     default: 'gray50',
     purple: 'purple50',
     purpleLight: 'gray50',
@@ -104,7 +108,7 @@ export const DisabledColors = {
     bnPurple: 'gray50',
 };
 
-export const DisabledFontColors = {
+export const DisabledFontColors: ColorsMap = {
     default: 'gray300',
     purple: 'white',
     purpleLight: 'gray300',

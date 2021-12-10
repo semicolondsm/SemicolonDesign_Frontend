@@ -6,7 +6,7 @@ type ClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 
 interface itemOption {
     title: string;
-    onClick?: (event: ClickEvent) => void;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
     buttonStyle?: CSSProperties;
 }
 

@@ -53,7 +53,7 @@ export const ButtonElement = styled.button<ButtonElementProps>`
     }
 `;
 
-export const Button: FC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
     children,
     size = 'md',
     fill = 'default',
@@ -64,7 +64,6 @@ export const Button: FC<ButtonProps> = ({
     rightIcon,
     onClick,
     className,
-    ...props
 }) => {
     const cursorType = disabled ? 'DISABLED' : loading ? 'LOADING' : 'DEFAULT';
     const colorString = colorObjectToColorString(fill, true);
@@ -98,7 +97,7 @@ export const Button: FC<ButtonProps> = ({
     };
 
     return (
-        <ButtonElement {...disabled} {...className} {...onClick} {...styledProps}>
+        <ButtonElement className={className} onClick={onClick} disabled={disabled} {...styledProps}>
             {leftIcon}
             <Botton className="semicolon-button-typography" color={FontColor}>
                 {children}
@@ -107,3 +106,5 @@ export const Button: FC<ButtonProps> = ({
         </ButtonElement>
     );
 };
+
+export default Button;
