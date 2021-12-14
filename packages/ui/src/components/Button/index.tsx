@@ -54,16 +54,15 @@ export const ButtonElement = styled.button<ButtonElementProps>`
 `;
 
 const Button: FC<ButtonProps> = ({
-    children,
     size = 'md',
     fill = 'default',
-    background = true,
     loading = false,
     disabled = false,
     leftIcon,
     rightIcon,
     onClick,
     className,
+    children,
 }) => {
     const cursorType = disabled ? 'DISABLED' : loading ? 'LOADING' : 'DEFAULT';
     const colorString = colorObjectToColorString(fill, true);

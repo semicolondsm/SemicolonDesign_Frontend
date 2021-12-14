@@ -42,7 +42,6 @@ export interface ButtonProps {
     className?: string;
     loading?: boolean;
     disabled?: boolean;
-    background?: boolean;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
