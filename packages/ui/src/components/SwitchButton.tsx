@@ -2,11 +2,11 @@ import React, { FC, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import { ColorScheme } from '@semicolondsm/design-token';
 
-export interface ButtonProps  {
+export interface ButtonProps {
     /** 토글되었을 때의 작동시킬 함수 */
     onToggle?: (e: boolean) => void;
     /** 스위치 버튼의 default 값 */
-    value?: boolean;   
+    value?: boolean;
 }
 
 interface ButtonWrapperProps {
