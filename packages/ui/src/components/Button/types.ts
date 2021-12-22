@@ -1,4 +1,4 @@
-import { ColorScheme } from '@semicolondsm/design-token';
+import { ColorToken } from '@semicolondsm/design-token';
 import React, { ReactElement, Component } from 'react';
 
 export type SizeType = 'sm' | 'md' | 'lg';
@@ -47,13 +47,13 @@ export interface ButtonProps {
 
 export interface ButtonElementProps {
     cursor: CursorType;
-    background: keyof ColorScheme;
-    activeBackground: keyof ColorScheme;
+    background: ColorToken;
+    activeBackground: ColorToken;
     paddingVertical: number;
     paddingHorizontal: number;
     borderRadius: number;
-    borderColor: keyof ColorScheme;
-    color: keyof ColorScheme;
+    borderColor: ColorToken;
+    color: ColorToken;
     size: SizeType;
     fillStyle: FillStyleType;
     marginLeft: number;
@@ -61,8 +61,9 @@ export interface ButtonElementProps {
     isFull: boolean;
 }
 
+
 interface ColorsMap {
-    [key: string]: keyof ColorScheme;
+    [key: string]: ColorToken;
 }
 
 export const Colors: ColorsMap = {

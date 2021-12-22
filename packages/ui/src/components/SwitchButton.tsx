@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { ColorScheme } from '@semicolondsm/design-token';
+import { ColorToken } from '@semicolondsm/design-token';
 
 interface ButtonProps {
     onToggle?: (e: boolean) => void;
@@ -8,7 +8,7 @@ interface ButtonProps {
 }
 
 interface ButtonWrapperProps {
-    background: keyof ColorScheme;
+    background: ColorToken;
 }
 
 interface ButtonCircleProps {

@@ -1,4 +1,4 @@
-import { ColorScheme } from '@semicolondsm/design-token';
+import { ColorToken } from '@semicolondsm/design-token';
 import { 
     FillStyleType,
     BackgroundNoneFillStyleType,
@@ -35,17 +35,17 @@ export function isBackgroundNone(color: string): boolean {
     else return false;
 }
 
-export function fillStyleToColorString(fillStyle: FillStyleType, colroState: ColorState): keyof ColorScheme {
+export function fillStyleToColorString(fillStyle: FillStyleType, colroState: ColorState): ColorToken {
     switch(colroState) {
         case "default":
-            return Colors[fillStyle] as keyof ColorScheme;
+            return Colors[fillStyle] as ColorToken;
         case "active":
-            return ActiveColors[fillStyle] as keyof ColorScheme;
+            return ActiveColors[fillStyle] as ColorToken;
         case "font":
-            return FontColors[fillStyle] as keyof ColorScheme;
+            return FontColors[fillStyle] as ColorToken;
         case "diabled":
-            return DisabledColors[fillStyle] as keyof ColorScheme;
+            return DisabledColors[fillStyle] as ColorToken;
         case "disabledFont":
-            return DisabledFontColors[fillStyle] as keyof ColorScheme;
+            return DisabledFontColors[fillStyle] as ColorToken;
     }
 }
