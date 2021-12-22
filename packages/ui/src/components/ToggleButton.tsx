@@ -1,18 +1,21 @@
 import React, { FC, CSSProperties, useState } from 'react';
-import styled from  '@emotion/styled';
+import styled from '@emotion/styled';
 import { Botton } from './typography';
 
 type ClickEvent = React.MouseEvent<HTMLButtonElement, MouseEvent>;
 
-interface itemOption {
+export interface itemOption {
     title: string;
     onClick?: (event: ClickEvent) => void;
     buttonStyle?: CSSProperties;
 }
 
-interface ButtonProps {
+export interface ButtonProps {
+    /** 들어갈 item 의 값들 type:{ title:string } */
     items: itemOption[];
+    /** 사용자가 직접 설정할 contain 스타일 값 */
     containStyle?: CSSProperties;
+    /** 사용자가 직접 설정해는 버튼의 갯수 (이 값이 없으면 item의 길이로 설정됩니다) */
     defaultValue?: number;
 }
 
@@ -53,7 +56,7 @@ const ActiveBackground = styled.div<ButtonStyledProps>`
     background: white;
     z-index: -1;
     transform: translateX(${(props) => (props.activeNumber - 1) * 100}%);
-    transition: all .3s cubic-bezier(0.5, 1, 0.89, 1);
+    transition: all 0.3s cubic-bezier(0.5, 1, 0.89, 1);
 `;
 
 const Background = styled.div`
@@ -66,42 +69,34 @@ const Background = styled.div`
     z-index: -2;
 `;
 
-export const ToggleButton: FC<ButtonProps> = ({
-    items,
-    containStyle,
-    defaultValue = 1
-}) => {
-    const rangeValue = defaultValue < 1 ? 1 
-        : defaultValue > items.length ? items.length 
-        : defaultValue;
+export const ToggleButton: FC<ButtonProps> = ({ items, containStyle, defaultValue = 1 }) => {
+    const rangeValue =
+        defaultValue < 1 ? 1 : defaultValue > items.length ? items.length : defaultValue;
     const [activeNumber, setActiveNumber] = useState<number>(rangeValue);
 
-    const buttonOnClick = (number: number, e: ClickEvent, callback?: ((event: ClickEvent) => void)) => {
+    const buttonOnClick = (
+        number: number,
+        e: ClickEvent,
+        callback?: (event: ClickEvent) => void,
+    ) => {
         setActiveNumber(number);
-        if(callback) callback(e);
-    }
+        if (callback) callback(e);
+    };
 
     return (
         <Container style={containStyle}>
             <Background />
             <ButtonWrapper>
                 <ActiveBackground activeNumber={activeNumber} length={items.length} />
-                {
-                    items.map(({
-                        title,
-                        onClick,
-                        buttonStyle,
-                    }, i) => (
-                        <Button 
-                            style={buttonStyle} 
-                            onClick={(e) => buttonOnClick(i+1, e, onClick)} 
-                            key={i}
-                        >
-                            <Botton color="gray700">{title}</Botton>
-                        </Button>
-                    ))
-                }
+                {items.map(({ title, onClick, buttonStyle }, i) => (
+                    <Button
+                        style={buttonStyle}
+                        onClick={(e) => buttonOnClick(i + 1, e, onClick)}
+                        key={i}>
+                        <Botton color="gray700">{title}</Botton>
+                    </Button>
+                ))}
             </ButtonWrapper>
         </Container>
-    )
+    );
 };
