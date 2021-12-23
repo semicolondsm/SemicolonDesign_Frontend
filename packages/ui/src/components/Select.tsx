@@ -1,0 +1,119 @@
+import React, { ReactChild, useEffect, useMemo, useRef, useState } from 'react';
+import styled from '@emotion/styled';
+import { Body2 } from './typography';
+import OutSideClickHandler from 'react-outside-click-handler';
+export interface DropDownProps<T> {
+    items: ReadonlyArray<T>;
+    value?: Readonly<T>;
+    overflowOptionDirection?: DirectionList;
+    placeholder: string;
+    onChange: (value: T) => void;
+}
+
+type DirectionList = 'right' | 'left' | 'center';
+
+const direction = {
+    center: 'center',
+    left: 'flex-end',
+    right: 'flex-start',
+};
+
+const DropDown = <T extends string>({
+    items,
+    value,
+    overflowOptionDirection = 'right',
+    onChange,
+    placeholder,
+}: DropDownProps<T>) => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [text, setText] = useState<T | string>(value ? value : placeholder);
+    return (
+        <OutSideClickHandler onOutsideClick={() => setIsOpen(false)}>
+            <DropdownButtonBox
+                overflowOptionDirection={overflowOptionDirection}
+                onClick={() => setIsOpen(!isOpen)}>
+                <DropDownMainBox>
+                    <Body2>{text}</Body2>
+                    <DropDownIcon></DropDownIcon>
+                </DropDownMainBox>
+                <DropDownOptionWrapper isVisiable={isOpen}>
+                    {items.map((title, i) => (
+                        <DropDownOption
+                            key={i}
+                            onClick={() => {
+                                onChange(title);
+                                setText(title);
+                            }}>
+                            <Body2>{title}</Body2>
+                        </DropDownOption>
+                    ))}
+                </DropDownOptionWrapper>
+            </DropdownButtonBox>
+        </OutSideClickHandler>
+    );
+};
+
+const DropDownMainBox = styled.div`
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    background: ${({ theme }) => theme.colors.gray100};
+    color: ${({ theme }) => theme.colors.gray700};
+    width: 100%;
+    > p {
+        width: 60px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    cursor: pointer;
+    :hover,
+    :active {
+        background: ${({ theme }) => theme.colors.gray300};
+    }
+`;
+
+const DropdownButtonBox = styled.div<{ overflowOptionDirection: DirectionList }>`
+    border-radius: 4px;
+    width: 104px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: ${({ overflowOptionDirection }) => direction[overflowOptionDirection]};
+`;
+
+const DropDownIcon = styled.div`
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 13px;
+    top: 10px;
+    background: ${({ theme }) => theme.colors.gray800};
+`;
+const DropDownOptionWrapper = styled.div<{ isVisiable: boolean }>`
+    display: ${({ isVisiable }) => (isVisiable ? 'block' : 'none')};
+    position: absolute;
+    min-width: 100%;
+    border: 1px solid ${({ theme }) => theme.colors.gray300};
+    top: 40px;
+    padding: 4px 0;
+    border-radius: 4px;
+    background-color: ${({ theme }) => theme.colors.white};
+`;
+const DropDownOption = styled.div`
+    height: 28px;
+    padding: 0 15px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    :hover {
+        background: ${({ theme }) => theme.colors.purple400};
+        > p {
+            color: ${({ theme }) => theme.colors.white};
+            white-space: nowrap;
+        }
+    }
+`;
+export default DropDown;
