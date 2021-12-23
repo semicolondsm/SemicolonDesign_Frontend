@@ -18,7 +18,7 @@ const direction = {
     right: 'flex-start',
 };
 
-const DropDown = <T extends string>({
+const Select = <T extends string>({
     items,
     value,
     overflowOptionDirection = 'right',
@@ -29,14 +29,14 @@ const DropDown = <T extends string>({
     const [text, setText] = useState<T | string>(value ? value : placeholder);
     return (
         <OutSideClickHandler onOutsideClick={() => setIsOpen(false)}>
-            <DropdownButtonBox
+            <SelectButtonBox
                 overflowOptionDirection={overflowOptionDirection}
                 onClick={() => setIsOpen(!isOpen)}>
-                <DropDownMainBox>
-                    <Body2>{text}</Body2>
+                <SelectMainBox>
+                    <Body2 className="select-title">{text}</Body2>
                     <DropDownIcon></DropDownIcon>
-                </DropDownMainBox>
-                <DropDownOptionWrapper isVisiable={isOpen}>
+                </SelectMainBox>
+                <DropDownMenuWrapper isVisiable={isOpen}>
                     {items.map((title, i) => (
                         <DropDownOption
                             key={i}
@@ -44,16 +44,16 @@ const DropDown = <T extends string>({
                                 onChange(title);
                                 setText(title);
                             }}>
-                            <Body2>{title}</Body2>
+                            <Body2 className="select-title">{title}</Body2>
                         </DropDownOption>
                     ))}
-                </DropDownOptionWrapper>
-            </DropdownButtonBox>
+                </DropDownMenuWrapper>
+            </SelectButtonBox>
         </OutSideClickHandler>
     );
 };
 
-const DropDownMainBox = styled.div`
+const SelectMainBox = styled.div`
     padding: 0 12px;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@ const DropDownMainBox = styled.div`
     background: ${({ theme }) => theme.colors.gray100};
     color: ${({ theme }) => theme.colors.gray700};
     width: 100%;
-    > p {
+    .select-title {
         width: 60px;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -74,7 +74,7 @@ const DropDownMainBox = styled.div`
     }
 `;
 
-const DropdownButtonBox = styled.div<{ overflowOptionDirection: DirectionList }>`
+const SelectButtonBox = styled.div<{ overflowOptionDirection: DirectionList }>`
     border-radius: 4px;
     width: 104px;
     display: flex;
@@ -91,7 +91,7 @@ const DropDownIcon = styled.div`
     top: 10px;
     background: ${({ theme }) => theme.colors.gray800};
 `;
-const DropDownOptionWrapper = styled.div<{ isVisiable: boolean }>`
+const DropDownMenuWrapper = styled.div<{ isVisiable: boolean }>`
     display: ${({ isVisiable }) => (isVisiable ? 'block' : 'none')};
     position: absolute;
     min-width: 100%;
@@ -110,10 +110,10 @@ const DropDownOption = styled.div`
     cursor: pointer;
     :hover {
         background: ${({ theme }) => theme.colors.purple400};
-        > p {
+        .select-title {
             color: ${({ theme }) => theme.colors.white};
             white-space: nowrap;
         }
     }
 `;
-export default DropDown;
+export default Select;
