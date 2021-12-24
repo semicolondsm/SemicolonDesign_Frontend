@@ -18,7 +18,7 @@ const direction = {
     right: 'flex-start',
 };
 
-const Select = <T extends string>({
+export const Select = <T extends string>({
     items,
     value,
     overflowOptionDirection = 'right',
@@ -116,4 +116,3 @@ const DropDownOption = styled.div`
         }
     }
 `;
-export default Select;
