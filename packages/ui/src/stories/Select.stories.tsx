@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React, { useState } from 'react';
-import Select from '../components/Select';
+import { Select } from '../components';
 
 export default {
     title: 'components/Select',
