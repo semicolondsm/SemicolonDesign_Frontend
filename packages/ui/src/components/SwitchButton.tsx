@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import { ColorScheme } from '@semicolondsm/design-token';
+import { ColorToken } from '@semicolondsm/design-token';
 
 export interface ButtonProps {
     /** 토글되었을 때의 작동시킬 함수 */
@@ -10,7 +10,7 @@ export interface ButtonProps {
 }
 
 interface ButtonWrapperProps {
-    background: keyof ColorScheme;
+    background: ColorToken;
 }
 
 interface ButtonCircleProps {

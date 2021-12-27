@@ -28,7 +28,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GHP_TOKEN }}
           
       - name: Yarn Set
-        run: yarn
+        run: yarn install --frozen-lockfile
 
       - name: Build
         run: yarn build:all
