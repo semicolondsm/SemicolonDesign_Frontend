@@ -58,6 +58,7 @@ const SelectMainBox = styled.div`
     display: flex;
     align-items: center;
     height: 36px;
+    border-radius: 4px;
     background: ${({ theme }) => theme.colors.gray100};
     color: ${({ theme }) => theme.colors.gray700};
     width: 100%;
