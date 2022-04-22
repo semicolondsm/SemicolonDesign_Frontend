@@ -43,6 +43,7 @@ export interface ButtonProps {
     loading?: boolean;
     disabled?: boolean;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    children?: React.ReactNode;
 }
 
 export interface ButtonElementProps {

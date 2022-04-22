@@ -50,7 +50,7 @@ const ButtonCircle = styled.div<ButtonCircleProps>`
     transition: transform 0.08s ease-in;
 `;
 /**  */
-export const SwitchButton: FC<ButtonProps> = ({ value = false, onToggle }) => {
+export const SwitchButton = ({ value = false, onToggle }: ButtonProps) => {
     const [isActive, setIsActive] = useState<boolean>(value);
 
     const onClick = () => {

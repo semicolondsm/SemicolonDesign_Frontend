@@ -69,7 +69,7 @@ const Background = styled.div`
     z-index: -2;
 `;
 
-export const ToggleButton: FC<ButtonProps> = ({ items, containStyle, defaultValue = 1 }) => {
+export const ToggleButton = ({ items, containStyle, defaultValue = 1 }: ButtonProps) => {
     const rangeValue =
         defaultValue < 1 ? 1 : defaultValue > items.length ? items.length : defaultValue;
     const [activeNumber, setActiveNumber] = useState<number>(rangeValue);

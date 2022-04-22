@@ -2863,22 +2863,22 @@ __metadata:
     "@storybook/addon-essentials": ^6.3.9
     "@storybook/addon-links": ^6.3.9
     "@storybook/react": ^6.3.9
-    "@types/react": ^17.0.27
+    "@types/react": 18.0.0
     "@types/react-outside-click-handler": ^1.3.0
     "@yarnpkg/esbuild-plugin-pnp": ^2.0.0
     emotion-theming: ^11.0.0
     esbuild: ^0.13.12
     gh-pages: ^3.2.3
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: 18.0.0
+    react-dom: 18.0.0
     react-outside-click-handler: ^1.3.0
     storybook-dark-mode: ^1.0.8
     typescript: ^4.4.3
   peerDependencies:
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
+    react: 18.0.0
+    react-dom: 18.0.0
   languageName: unknown
   linkType: soft
 
@@ -4166,7 +4166,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^17.0.13, @types/react@npm:^17.0.27":
+"@types/react@npm:*, @types/react@npm:^17.0.13":
   version: 17.0.30
   resolution: "@types/react@npm:17.0.30"
   dependencies:
@@ -4174,6 +4174,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: e3aaac1b8fda6e3622b75db0bd7d8dc412c2f2b77a00afdd32cae8c71fb0b1ca6926ab1fbe1c536dd51d96c0ba372738993837a8df1637637aaab7b86e421b7f
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:18.0.0":
+  version: 18.0.0
+  resolution: "@types/react@npm:18.0.0"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 8a9769e2cabe335c86179881577e6ca32f3a6abdd5adbe2d498e48b78d532130da828a53ef25f21915179da454654b811292e0a8191c8a81af3bf4b05f5673bd
   languageName: node
   linkType: hard
 
@@ -6985,7 +6996,10 @@ __metadata:
     "@semantic-release/github": ^8.0.1
     "@semantic-release/npm": ^8.0.1
     "@semantic-release/release-notes-generator": ^10.0.2
+    "@types/react": 18.0.0
     multi-semantic-release: ^2.9.1
+    react: 18.0.0
+    react-dom: 18.0.0
     typescript: ^4.4.3
   languageName: unknown
   linkType: soft
@@ -13664,16 +13678,15 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^17.0.2":
-  version: 17.0.2
-  resolution: "react-dom@npm:17.0.2"
+"react-dom@npm:18.0.0":
+  version: 18.0.0
+  resolution: "react-dom@npm:18.0.0"
   dependencies:
     loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-    scheduler: ^0.20.2
+    scheduler: ^0.21.0
   peerDependencies:
-    react: 17.0.2
-  checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+    react: ^18.0.0
+  checksum: dd0ba9f2f31dd728076c892a95b2f5a8dfe79136431b0289afb46eec39d0ca6b6f0f40a60fd8aa6ef702c98ce7c26100d3d4dbc35c7c9e87429cd04f84cb58bd
   languageName: node
   linkType: hard
 
@@ -13855,6 +13868,15 @@ fsevents@^1.2.7:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0
   checksum: da3d0192825df3d9f27eef33e7eddf928359a7e3e2b01ae7f7f672ecf4e5c1f7a34f27bdde9ccc24e2e9fbe1d1b9dd2a39c7d47323c9bdf63e7b9bd05c325a71
+  languageName: node
+  linkType: hard
+
+"react@npm:18.0.0":
+  version: 18.0.0
+  resolution: "react@npm:18.0.0"
+  dependencies:
+    loose-envify: ^1.1.0
+  checksum: 293020b96536b3c7113ee57ca5c990a3f25649d1751b1c7a3aabd16dff0691fe9f1eed1206616d0906d05933536052037340a0c8d0941ff870b0eb469a2f975b
   languageName: node
   linkType: hard
 
@@ -14476,13 +14498,12 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.20.2":
-  version: 0.20.2
-  resolution: "scheduler@npm:0.20.2"
+"scheduler@npm:^0.21.0":
+  version: 0.21.0
+  resolution: "scheduler@npm:0.21.0"
   dependencies:
     loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-  checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
+  checksum: 4f8285076041ed2c81acdd1faa987f1655fdbd30554bc667c1ea64743fc74fb3a04ca7d27454b3d678735df5a230137a3b84756061b43dc5796e80701b66d124
   languageName: node
   linkType: hard
 

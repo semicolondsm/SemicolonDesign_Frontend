@@ -1,4 +1,4 @@
-import React, { ReactChild, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Body2 } from './typography';
 import OutSideClickHandler from 'react-outside-click-handler';
