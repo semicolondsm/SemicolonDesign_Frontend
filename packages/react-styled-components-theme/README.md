@@ -1,16 +1,16 @@
-# @semicolondsm/react-emotion-theme
+# @semicolondsm/react-styled-components-theme
 
 ## Install
 
 ```
-yarn add @semicolondsm/react-emotion-theme
+yarn add @semicolondsm/react-styled-components-theme
 ```
 
 ## Usage
 
 ```jsx
 import React from "react";
-import { SDSThemeProvider } from "@semicolondsm/react-emotion-theme";
+import { SDSThemeProvider } from "@semicolondsm/react-styled-components-theme";
 
 <SDSThemeProvider>
   <MyComponent />
