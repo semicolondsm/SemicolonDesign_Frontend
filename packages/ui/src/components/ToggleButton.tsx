@@ -43,6 +43,7 @@ const Button = styled.button`
     border-radius: 22px;
     padding: 8px 0;
     flex: 1;
+    z-index: 3;
     cursor: pointer;
     border: none;
     background: none;
@@ -54,7 +55,7 @@ const ActiveBackground = styled.div<ButtonStyledProps>`
     border-radius: 22px;
     position: absolute;
     background: white;
-    z-index: -1;
+    z-index: 2;
     transform: translateX(${(props) => (props.activeNumber - 1) * 100}%);
     transition: all 0.3s cubic-bezier(0.5, 1, 0.89, 1);
 `;
@@ -66,7 +67,7 @@ const Background = styled.div`
     width: 100%;
     height: 100%;
     background: ${(props) => props.theme.colors.gray100};
-    z-index: -2;
+    z-index: 1;
 `;
 
 export const ToggleButton = ({ items, containStyle, defaultValue = 1 }: ToggleButtonProps) => {
