@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 import * as React from 'react';
 import { Body1, Title3 } from '../components';
-import { ButtonProps, ToggleButton } from '../components/ToggleButton';
+import { ToggleButtonProps, ToggleButton } from '../components/ToggleButton';
 export default { title: 'components/ToggleButton', component: ToggleButton };
 
-export const Default: React.FC<ButtonProps> = () => {
+export const Default: React.FC<ToggleButtonProps> = () => {
     const [page, setPage] = React.useState(1);
     return (
         <Wrapper>
