@@ -7,7 +7,7 @@ export interface DropDownProps<T> {
     value?: Readonly<T>;
     overflowOptionDirection?: DirectionList;
     placeholder: string;
-    onChange: (value: T) => void;
+    onChange?: (value: T) => void;
 }
 
 type DirectionList = 'right' | 'left' | 'center';
@@ -41,7 +41,7 @@ export const Select = <T extends string>({
                         <DropDownOption
                             key={i}
                             onClick={() => {
-                                onChange(title);
+                                if(onChange) onChange(title);
                                 setText(title);
                             }}>
                             <Body2 className="select-title">{title}</Body2>
@@ -96,6 +96,7 @@ const DropDownMenuWrapper = styled.div<{ isVisiable: boolean }>`
     display: ${({ isVisiable }) => (isVisiable ? 'block' : 'none')};
     position: absolute;
     min-width: 100%;
+    z-index: ${Math.pow(10, 10)};
     border: 1px solid ${({ theme }) => theme.colors.gray300};
     top: 40px;
     padding: 4px 0;
