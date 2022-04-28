@@ -10,7 +10,7 @@ export interface itemOption {
     buttonStyle?: CSSProperties;
 }
 
-export interface ButtonProps {
+export interface ToggleButtonProps {
     /** 들어갈 item 의 값들 type:{ title:string } */
     items: itemOption[];
     /** 사용자가 직접 설정할 contain 스타일 값 */
@@ -69,7 +69,7 @@ const Background = styled.div`
     z-index: -2;
 `;
 
-export const ToggleButton = ({ items, containStyle, defaultValue = 1 }: ButtonProps) => {
+export const ToggleButton = ({ items, containStyle, defaultValue = 1 }: ToggleButtonProps) => {
     const rangeValue =
         defaultValue < 1 ? 1 : defaultValue > items.length ? items.length : defaultValue;
     const [activeNumber, setActiveNumber] = useState<number>(rangeValue);
