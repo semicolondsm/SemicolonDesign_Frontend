@@ -145,6 +145,7 @@ export const Size = () => {
                 <Button size="sm">sm-button</Button>
                 <Button size="md">md-button</Button>
                 <Button size="lg">lg-button</Button>
+                <Button fullWidth>Full Size Button</Button>
             </SizeWrapper>
         </>
     );

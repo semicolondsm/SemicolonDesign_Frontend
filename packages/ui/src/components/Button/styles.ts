@@ -3,7 +3,6 @@ import { ColorScheme } from '@semicolondsm/design-token';
 
 export const full = () => css`
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +10,8 @@ export const full = () => css`
 `;
 
 export const link = (props: any) => css`
-    &:hover, &:active {
+    &:hover,
+    &:active {
         text-decoration: underline 1px solid ${props.theme.colors[props.color]};
-    }   
-`
+    }
+`;

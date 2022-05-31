@@ -39,7 +39,7 @@ export const ButtonElement = styled.button<ButtonElementProps>`
     border-radius: ${(props) => props.borderRadius}px;
     border: 1px solid ${(props) => props.theme.colors[props.borderColor]};
 
-    ${(props) => props.isFull && full()}
+    ${(props) => props.fullWidth && full()}
 
     ${(props) => props.fillStyle === 'link' && link(props)}
 
@@ -63,6 +63,7 @@ export const Button = ({
     onClick,
     className,
     children,
+    fullWidth,
 }: ButtonProps) => {
     const cursorType = disabled ? 'DISABLED' : loading ? 'LOADING' : 'DEFAULT';
     const colorString = colorObjectToColorString(fill, true);
@@ -90,7 +91,7 @@ export const Button = ({
         size: size,
         fillStyle: colorString,
         color: FontColor,
-        isFull: typeof fill !== 'string' && fill?.full === true,
+        fullWidth: Boolean(fullWidth),
         marginLeft: leftIcon ? 6 : 0,
         marginRight: loading || rightIcon ? 6 : 0,
     };
