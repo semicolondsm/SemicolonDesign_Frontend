@@ -42,6 +42,7 @@ export interface ButtonProps {
     className?: string;
     loading?: boolean;
     disabled?: boolean;
+    fullWidth?: boolean;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     children?: React.ReactNode;
 }
@@ -59,9 +60,8 @@ export interface ButtonElementProps {
     fillStyle: FillStyleType;
     marginLeft: number;
     marginRight: number;
-    isFull: boolean;
+    fullWidth: boolean;
 }
-
 
 interface ColorsMap {
     [key: string]: ColorToken;
