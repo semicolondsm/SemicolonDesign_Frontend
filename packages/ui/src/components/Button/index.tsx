@@ -33,6 +33,7 @@ export const ButtonElement = styled.button<ButtonElementProps>`
     display: flex;
     align-items: center;
     border: none;
+    outline: none;
     cursor: ${(props) => props.cursor};
     background: ${(props) => props.theme.colors[props.background]};
     padding: ${(props) => `${props.paddingVertical}px ${props.paddingHorizontal}px`};
@@ -42,8 +43,13 @@ export const ButtonElement = styled.button<ButtonElementProps>`
     ${(props) => props.fullWidth && full()}
 
     ${(props) => props.fillStyle === 'link' && link(props)}
-
-    &:hover, &:active {
+    @media(hover: hover) {
+        &:hover {
+            background: ${(props) => props.theme.colors[props.activeBackground]};
+        }
+    }
+    -webkit-tap-highlight-color: transparent;
+    &:active {
         background: ${(props) => props.theme.colors[props.activeBackground]};
     }
 
