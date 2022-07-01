@@ -2,7 +2,7 @@
     "name": "@semicolondsm/react-styled-components-theme",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "author": "syi0808 <syi0808@naver.com>",
     "license": "MIT",
     "publishConfig": {
@@ -25,7 +25,7 @@
         "styled-components": "*"
     },
     "dependencies": {
-        "@semicolondsm/design-token": "1.0.7",
+        "@semicolondsm/design-token": "1.0.8",
         "@semicolondsm/react-theming": "1.0.4"
     },
     "files": [
