@@ -27,7 +27,7 @@ colors.dark.scheme;
 ```
 
 ```html
-<link rel="stylesheet" href="https://assets-fe.xquare.app/style.css" />
+<link rel="stylesheet" href="https://style.xquare.app/styles.css" />
 ```
 
 Link가 되면 CSS 에서 color: var(--blue400) 처럼 쓸 수 있습니다.

@@ -16,7 +16,7 @@ yarn add @semicolondsm/ui
 사용하 전 반드시 아래 코드를 추가해주세요
 
 ```html
-<link rel="stylesheet" href="https://assets-fe.xquare.app/style.css" />
+<link rel="stylesheet" href="https://style.xquare.app/styles.css" />
 ```
 
 ```jsx
