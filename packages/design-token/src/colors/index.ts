@@ -1,4 +1,4 @@
-import { ColorTheme } from "./types";
+import { ColorTheme } from './types';
 export const auto: Readonly<ColorTheme> = {
     scheme: {
         white: 'var(--white)',
@@ -37,7 +37,7 @@ export const auto: Readonly<ColorTheme> = {
         yellow600: 'var(--yellow600)',
         yellow700: 'var(--yellow700)',
         yellow800: 'var(--yellow800)',
-        yellow900: 'var(--yellow900)', 
+        yellow900: 'var(--yellow900)',
 
         /* indigo */
         indigo50: 'var(--indigo50)',
@@ -53,7 +53,7 @@ export const auto: Readonly<ColorTheme> = {
 
         /* red */
         red50: 'var(--red50)',
-        red100: 'var(--red100)', 
+        red100: 'var(--red100)',
         red200: 'var(--red200)',
         red300: 'var(--red300)',
         red400: 'var(--red400)',
@@ -85,9 +85,9 @@ export const auto: Readonly<ColorTheme> = {
         blue600: 'var(--blue600)',
         blue700: 'var(--blue700)',
         blue800: 'var(--blue800)',
-        blue900: 'var(--blue900)', 
-    }
-}
+        blue900: 'var(--blue900)',
+    },
+};
 export const light: Readonly<ColorTheme> = {
     scheme: {
         white: '#FFFFFF',
@@ -105,16 +105,16 @@ export const light: Readonly<ColorTheme> = {
         purple900: '#420399',
 
         /* gray */
-        gray50: '#FAFAFA',
+        gray50: '#F2F0F5',
         gray100: '#F5F5F5',
-        gray200: '#EEEEEE',
-        gray300: '#E0E0E0',
-        gray400: '#BDBDBD',
-        gray500: '#9E9E9E',
-        gray600: '#757575',
-        gray700: '#616161',
-        gray800: '#424242',
-        gray900: '#212121',
+        gray200: '#EAE7EE',
+        gray300: '#DBD7E0',
+        gray400: '#B7B4BD',
+        gray500: '#98959E',
+        gray600: '#706D75',
+        gray700: '#5C5961',
+        gray800: '#3F3C42',
+        gray900: '#1F1E21',
 
         /* yellow */
         yellow50: '#FFFEE6',
@@ -126,7 +126,7 @@ export const light: Readonly<ColorTheme> = {
         yellow600: '#E0DA1B',
         yellow700: '#C2BB10',
         yellow800: '#ADA80E',
-        yellow900: '#999403', 
+        yellow900: '#999403',
 
         /* indigo */
         indigo50: '#EAE6FF',
@@ -142,7 +142,7 @@ export const light: Readonly<ColorTheme> = {
 
         /* red */
         red50: '#FFE6E6',
-        red100: '#FFB3B5', 
+        red100: '#FFB3B5',
         red200: '#FF8589',
         red300: '#F56267',
         red400: '#F04D51',
@@ -174,10 +174,9 @@ export const light: Readonly<ColorTheme> = {
         blue600: '#1A72D6',
         blue700: '#0F5EB8',
         blue800: '#0D53A3',
-        blue900: '#03448E', 
-    }
-    
-}
+        blue900: '#03448E',
+    },
+};
 
 export const dark: Readonly<ColorTheme> = {
     scheme: {
@@ -217,7 +216,7 @@ export const dark: Readonly<ColorTheme> = {
         yellow600: '#E0DA1B',
         yellow700: '#C2BB10',
         yellow800: '#ADA80E',
-        yellow900: '#999403', 
+        yellow900: '#999403',
 
         /* indigo */
         indigo50: '#EAE6FF',
@@ -233,7 +232,7 @@ export const dark: Readonly<ColorTheme> = {
 
         /* red */
         red50: '#FFE6E6',
-        red100: '#FFB3B5', 
+        red100: '#FFB3B5',
         red200: '#FF8589',
         red300: '#F56267',
         red400: '#F04D51',
@@ -265,7 +264,6 @@ export const dark: Readonly<ColorTheme> = {
         blue600: '#1A72D6',
         blue700: '#0F5EB8',
         blue800: '#0D53A3',
-        blue900: '#03448E', 
-    }
-    
-}
+        blue900: '#03448E',
+    },
+};
