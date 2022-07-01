@@ -2652,7 +2652,7 @@ __metadata:
   resolution: "@semicolondsm/react-emotion-theme@workspace:packages/react-emotion-theme"
   dependencies:
     "@emotion/react": ^11.4.0
-    "@semicolondsm/design-token": 1.0.7
+    "@semicolondsm/design-token": 1.0.8
     "@semicolondsm/react-theming": 1.0.4
     "@types/react": ^17.0.13
     "@yarnpkg/esbuild-plugin-pnp": ^2.0.0
@@ -2669,7 +2669,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@semicolondsm/react-styled-components-theme@workspace:packages/react-styled-components-theme"
   dependencies:
-    "@semicolondsm/design-token": 1.0.7
+    "@semicolondsm/design-token": 1.0.8
     "@semicolondsm/react-theming": 1.0.4
     "@types/react": ^18.0.6
     "@types/styled-components": ^5.1.25
@@ -2702,7 +2702,7 @@ __metadata:
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@mdx-js/react": ^1.6.22
-    "@semicolondsm/design-token": 1.0.7
+    "@semicolondsm/design-token": 1.0.8
     "@storybook/addon-docs": ^6.3.9
     "@storybook/addon-essentials": ^6.3.9
     "@storybook/addon-links": ^6.3.9

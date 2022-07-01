@@ -68,7 +68,7 @@ interface ColorsMap {
 }
 
 export const Colors: ColorsMap = {
-    default: 'gray100',
+    default: 'gray50',
     purple: 'purple400',
     purpleLight: 'purple50',
     border: 'white',
@@ -79,10 +79,10 @@ export const Colors: ColorsMap = {
 };
 
 export const ActiveColors: ColorsMap = {
-    default: 'gray300',
+    default: 'gray200',
     purple: 'purple500',
     purpleLight: 'purple100',
-    border: 'gray100',
+    border: 'gray50',
     link: 'white',
     bnDefault: 'gray50',
     bnPurple: 'purple50',
@@ -113,7 +113,7 @@ export const DisabledFontColors: ColorsMap = {
     default: 'gray300',
     purple: 'white',
     purpleLight: 'gray300',
-    border: 'gray300',
+    border: 'gray200',
     link: 'gray300',
     bnDefault: 'gray300',
     bnPurple: 'gray300',
