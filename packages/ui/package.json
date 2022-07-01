@@ -49,7 +49,7 @@
         "typescript": "^4.6.3"
     },
     "dependencies": {
-        "@semicolondsm/design-token": "1.0.7",
+        "@semicolondsm/design-token": "1.0.8",
         "react-outside-click-handler": "^1.3.0"
     }
 }
