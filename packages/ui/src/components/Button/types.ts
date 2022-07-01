@@ -72,7 +72,7 @@ export const Colors: ColorsMap = {
     purple: 'purple400',
     purpleLight: 'purple50',
     border: 'white',
-    borderColor: 'gray100',
+    borderColor: 'gray300',
     link: 'white',
     bnDefault: 'white',
     bnPurple: 'white',
