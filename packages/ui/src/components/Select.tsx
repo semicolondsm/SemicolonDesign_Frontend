@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Body2 } from './typography';
 import OutSideClickHandler from 'react-outside-click-handler';
+
 export interface DropDownProps<T> {
     items: ReadonlyArray<T>;
     value?: Readonly<T>;
@@ -34,14 +35,23 @@ export const Select = <T extends string>({
                 onClick={() => setIsOpen(!isOpen)}>
                 <SelectMainBox>
                     <Body2 className="select-title">{text}</Body2>
-                    <DropDownIcon></DropDownIcon>
+                    <DropDownIcon>
+                        <svg
+                            width="12"
+                            height="6"
+                            viewBox="0 0 12 6"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0L6 6L12 0H0Z" fill="#98959E" />
+                        </svg>
+                    </DropDownIcon>
                 </SelectMainBox>
                 <DropDownMenuWrapper isVisiable={isOpen}>
                     {items.map((title, i) => (
                         <DropDownOption
                             key={i}
                             onClick={() => {
-                                if(onChange) onChange(title);
+                                if (onChange) onChange(title);
                                 setText(title);
                             }}>
                             <Body2 className="select-title">{title}</Body2>
@@ -87,6 +97,9 @@ const SelectButtonBox = styled.div<{ overflowOptionDirection: DirectionList }>`
 const DropDownIcon = styled.div`
     width: 16px;
     height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 13px;
     top: 10px;
