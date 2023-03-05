@@ -103,7 +103,6 @@ const DropDownIcon = styled.div`
     position: absolute;
     right: 13px;
     top: 10px;
-    background: ${({ theme }) => theme.colors.gray800};
 `;
 const DropDownMenuWrapper = styled.div<{ isVisiable: boolean }>`
     display: ${({ isVisiable }) => (isVisiable ? 'block' : 'none')};
